@@ -2,12 +2,11 @@ weather = ["sunny", "rainy", "cold"]
 
 user = input("What's the weather like today?")
 
-match user:
-    case "sunny":
-        print("Wear a t-shirt and sunglasses.")
-    case "rainy":
-        print("Don't forget your umbrella and a raincoat.")
-    case "cold":
-        print("Make sure to wear a warm coat and a scarf.")
-    case _:
-        print("Sorry, I don't have recommendations for this weather.")
+if user == "sunny" :
+    print("Wear a t-shirt and sunglasses.")
+elif user == "rainy" : 
+    print("Don't forget your umbrella and a raincoat.")
+elif user == "cold" :
+    print("Make sure to wear a warm coat and a scarf.")
+else :
+    print("Sorry, I don't have recommendations for this weather.")
