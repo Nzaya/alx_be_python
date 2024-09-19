@@ -1,7 +1,7 @@
-weather = ["sunny", "rainy", "cold"]
+# Prompt User for Weather Input
+user = input("What's the weather like today? (sunny/rainy/cold)")
 
-user = input("What's the weather like today?")
-
+# Provide Clothing Recommendations
 if user == "sunny" :
     print("Wear a t-shirt and sunglasses.")
 elif user == "rainy" : 
