@@ -1,5 +1,5 @@
 # Prompt User for Weather Input
-user = input("What's the weather like today? (sunny/rainy/cold)")
+user = input("What's the weather like today? (sunny/rainy/cold): ").lower()
 
 # Provide Clothing Recommendations
 if user == "sunny" :
