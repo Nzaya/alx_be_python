@@ -8,16 +8,21 @@ def display_menu():
 
 # Main function to manage the shopping list
 def main():
-    # Start with an empty shopping list
+    # Start with an empty shopping list (Array)
     shopping_list = []
 
     # Loop until the user decides to exit
     while True:
-        display_menu()
-        choice = input("Enter your choice: ")
+        display_menu()  # Ensure the menu is displayed every iteration
+        try:
+            # Ensure the input is a number by casting it to an integer
+            choice = int(input("Enter your choice (1-4): "))
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
+            continue
 
         # Add item to the shopping list
-        if choice == '1':
+        if choice == 1:
             item = input("Enter the item to add: ").strip()
             if item:
                 shopping_list.append(item)
@@ -26,7 +31,7 @@ def main():
                 print("Item cannot be empty. Please try again.")
 
         # Remove item from the shopping list
-        elif choice == '2':
+        elif choice == 2:
             item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
@@ -35,7 +40,7 @@ def main():
                 print(f"'{item}' not found in the shopping list.")
 
         # View the current shopping list
-        elif choice == '3':
+        elif choice == 3:
             if shopping_list:
                 print("\nCurrent Shopping List:")
                 for idx, item in enumerate(shopping_list, start=1):
@@ -44,13 +49,13 @@ def main():
                 print("The shopping list is currently empty.")
 
         # Exit the program
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
 
         # Handle invalid menu choices
         else:
-            print("Invalid choice. Please try again.")
+            print("Invalid choice. Please enter a number between 1 and 4.")
 
 # Check if the script is being run directly
 if __name__ == "__main__":
