@@ -1,6 +1,7 @@
 # Function to display the menu options
 def display_menu():
-    print("\nShopping List Manager")
+    # Ensure the text "Shopping List Manager" is printed exactly as expected
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -8,12 +9,12 @@ def display_menu():
 
 # Main function to manage the shopping list
 def main():
-    # Start with an empty shopping list (Array)
+    # Start with an empty shopping list
     shopping_list = []
 
     # Loop until the user decides to exit
     while True:
-        display_menu()  # Ensure the menu is displayed every iteration
+        display_menu()  # Display the menu at the beginning of each loop iteration
         try:
             # Ensure the input is a number by casting it to an integer
             choice = int(input("Enter your choice (1-4): "))
